@@ -1,0 +1,11 @@
+#Comandos
+django-admin help
+
+#Configurações
+importar o os e dotenv, carregar .env load_dotenv()
+configurar fuso horário
+configurar SECRET_KEY utilizando .env
+configurar URLS tirando a responsabilidade do setup e colocando no app
+configurar os templates no settings DIRS linha 58
+carregar o template html na views do app
+no urls.py carregamos os caminhos das opções do app

@@ -1,0 +1,16 @@
+{% extends "catalogo/template.html" %}
+{% load static %}
+{% block conteudo %}
+        <div class="titulo">
+            <h1>Fotos</h1>
+        </div>
+        <hr>
+        <div class="container_fotos_brinquedos">
+            {% for foto in fotos %}
+                    <a href="{{ foto.foto.url }}" target="_blank"><img src="{{ foto.foto.url }}" alt="" class="foto_brinquedo"></a>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>
+{% endblock %}

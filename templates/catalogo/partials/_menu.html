@@ -1,0 +1,8 @@
+{% load static %}
+<div class="container_cabecalho">
+    <a href="{% url 'index' %}" class="navegacao">Início</a>
+    <a href="{% url 'contatos' %}" class="navegacao">Contatos</a>
+    <a href="{% url 'index' %}"><img src="{% static 'assets/fav.webp' %}" alt="logo" class="logo_menu"></a>
+    <a href="{% url 'fotos' %}" class="navegacao">Fotos</a>
+    <a href="{% url 'quem_somos' %}" class="navegacao">Quem Somos</a>
+</div>

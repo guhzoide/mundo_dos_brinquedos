@@ -1,0 +1,48 @@
+{% extends "catalogo/template.html" %}
+{% load static %}
+{% block conteudo %}
+        <div class="container_brinquedos">
+            <h1 class="texto_colorido">Seja bem-vindo(a)</h1>
+            <input type="text" id="search" placeholder="Pesquisar produtos">
+            
+            <ul class="lista_brinquedos">
+                {% if cards %}
+                    {% for brinquedo in cards %}
+                        <li class="card">
+                            <div class="brinquedo">
+                                {% if brinquedo.foto == "" or brinquedo.foto == null %}
+                                    <a href="{% url 'descricao' brinquedo.id %}"><img src="{% static 'images/capa_padrao.jpg' %}" alt="" class="brinquedo_imagem"></a>
+                                {% else %}
+                                    <a href="{% url 'descricao' brinquedo.id %}"><img src="{{ brinquedo.foto.url }}" alt="" class="brinquedo_imagem"></a> 
+                                {% endif %}
+                                <p class="descricao">{{ brinquedo.nome }}</p>
+                                <p class="descricao">R$ {{ brinquedo.valor }}</p>
+                            </div>
+                        </li>
+                    {% endfor %}
+                {% else %}
+                {% endif %}
+            </ul>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('search').addEventListener('input', function() {
+                    var input = this.value.toLowerCase();
+                    var brinquedos = document.querySelectorAll('.lista_brinquedos .card');
+    
+                    brinquedos.forEach(function(brinquedo) {
+                        var brinquedoName = brinquedo.querySelector('.descricao').textContent.toLowerCase();
+                        
+                        if (brinquedoName.includes(input)) {
+                            brinquedo.style.display = '';
+                        } else {
+                            brinquedo.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        </script>
+    </main>
+</body>
+</html>
+{% endblock %}

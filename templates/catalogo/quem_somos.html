@@ -1,0 +1,14 @@
+{% extends "catalogo/template.html" %}
+{% block conteudo %}
+    <div class="fundo_contatos">
+        <h1 class="titulo_preto">Olá, <span class="texto_colorido">venha nos conhecer</span>!</h1>
+        <div class="mod_texto">
+            {% for texto in texto %}
+                <span class="texto">{{ texto.texto }}</span>
+            {% endfor %}
+        </div>
+    </div>
+    </main>
+</body>
+</html>
+{% endblock %}

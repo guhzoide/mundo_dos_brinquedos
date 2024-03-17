@@ -1,0 +1,245 @@
+@import url('https://fonts.cdnfonts.com/css/oblivian-text');
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Oblivian Text', sans-serif;
+    line-height: 1;
+    min-height: 100vh;
+    background-image: url("../static/assets/fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 70px;
+}
+
+.titulo_preto{
+    color: black;
+}
+
+a:hover {
+    color: #ff196d;
+    transition: all 0.3s ease-in-out;
+}
+
+.container_cabecalho{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.831);
+    border-radius: 10px;
+    color: white;
+}
+
+.logo_menu {
+    display: flex;
+    width: 150px;
+    justify-content: center;
+}
+
+.navegacao {
+    padding: 50px;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.titulo {
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.706);
+    border-radius: 10px;
+}
+
+.texto {
+    line-height: 1.5;
+}
+
+.texto_colorido {
+    color: #ff196d;
+}
+
+.mod_texto {
+    text-align: center;
+}
+
+/* Tela home */
+
+#search {
+    font-size: 20px;
+    width: 600px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 4px 4px 12px rgb(0, 0, 0);
+    text-align: center;
+}
+
+#search:hover {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 4px 4px 12px #ff196d98;
+}
+
+.container_brinquedos {
+    text-align: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    background-color: rgb(255, 255, 255, 0.706);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.lista_brinquedos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    text-decoration: none;
+    padding: 20px;
+    position: relative;
+}
+
+.brinquedo {
+    background-color: white;
+    width: 350px;
+    height: 500px;
+    border-radius: 12px;
+    
+}
+
+.brinquedo:hover {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 4px 4px 12px rgb(0, 0, 0);
+}
+
+.brinquedo_imagem{
+    padding: 20px;
+    width: 250px;
+}
+
+.descricao {
+    font-size: 25px;
+}
+
+.botao {
+    background-color: #2192FF;
+    color: white;
+    font-size: 25px;
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+    padding: 4px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.botao:hover {
+    transition: all 0.3s ease-in-out;
+    color: #ff196d;
+    background-color: rgb(0, 0, 132);
+    text-align: center;
+}
+
+.redes_contatos {
+    color: white;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.706);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.facebook, .instagram {
+    width: 45px;
+    padding: 10px;
+}
+
+
+/* Tela descição */
+
+.container_desc_brinquedos {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    background-color: rgb(255, 255, 255, 0.706);
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 30px;
+}
+
+.texto_descricao {
+    padding: 20px;
+}
+
+.brinquedo_descricao {
+    width: 450px;
+}
+
+.container_texto_valor {
+    flex-direction: column;
+    padding: 30px;
+}
+
+
+/* Tela contatos */
+
+
+.fundo_contatos {
+    font-size: 25px;
+    padding: 25px;
+    background-color: rgb(255, 255, 255, 0.706);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.excel-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 4px solid #dcdcdc;
+}
+
+.excel-table th, .excel-table td {
+    border: 4px solid #00000079;
+    padding: 5px;
+}
+
+.excel-table th {
+    background-color: #f2f2f2;
+}
+
+/* Fotos */
+
+.container_fotos_brinquedos {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    background-color: rgb(255, 255, 255, 0.706);
+    border-radius: 10px;
+    padding: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.foto_brinquedo {
+    width: 350px;
+    padding: 30px;
+    position: relative;
+}

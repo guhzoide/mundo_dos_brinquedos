@@ -1,0 +1,24 @@
+{% extends "catalogo/template.html" %}
+{% load static %}
+{% block conteudo %}
+    <div class="container_desc_brinquedos">
+        {% for brinquedo in descricao %}
+            {% if brinquedo.foto == "" or brinquedo.foto == null %}
+                <img src="{% static 'images/capa_padrao.jpg' %}" alt="" class="brinquedo_imagem">
+            {% else %}
+                <a href="{{ brinquedo.foto.url }}" target="_blank"><img src="{{ brinquedo.foto.url }}" alt="" class="brinquedo_imagem"></a> 
+            {% endif %}
+            <div class="container_texto_valor">
+                <h1 class="titulo_preto">{{ brinquedo.nome }}</h1>
+                <span class="texto_descricao">{{ brinquedo.descricao }}</span>
+                <p><span class="texto_colorido">Valor:</span> R$ {{ brinquedo.valor }}</p>
+                <a href="https://wa.me/{{contato.numero}}" target="_blank" class="whats_contato">{{ contato.nome }}</a>
+                <a href="{% url 'contatos' %}" target="_blank" class="botao">WhatsApp</a>
+                <a href="{% url 'index' %}" class="botao">Voltar</a>
+            </div>
+        {% endfor %}
+    </div>
+    </main>
+</body>
+</html>
+{% endblock %}

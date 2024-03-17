@@ -1,0 +1,25 @@
+{% extends "catalogo/template.html" %}
+{% load static %}
+{% block conteudo %}
+    <div class="fundo_contatos">
+        <h1 class="titulo_preto">Contatos:</h1>
+        <table class="excel-table">
+            <tr>
+                <th>WhatsApp</th>
+                <th>G-mail</th>
+            </tr>
+            {% for contato in contatos %}
+                <tr>
+                    <td><a href="https://wa.me/{{contato.numero}}" target="_blank" class="whats_contato">{{ contato.nome }}</a></td>
+                    <td>{{ contato.gmail }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <!-- <div class="logo">
+            <img src="../static/assets/fav.webp" alt="Logo">
+        </div> -->
+    </div>
+    </main>
+</body>
+</html>
+{% endblock %}

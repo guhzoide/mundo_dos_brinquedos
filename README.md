@@ -11,6 +11,8 @@
 # IMAGENS
 INÍCIO:
 <img align="center" alt="home-sem-menu" src="https://github.com/guhzoide/mundo_dos_brinquedos/blob/master/project_images/inicio.png">
+
+FOOTER:
 <img align="center" alt="home-sem-menu" src="https://github.com/guhzoide/mundo_dos_brinquedos/blob/master/project_images/inicio_footer.png">
 
 CONTATOS:
